@@ -21,5 +21,5 @@ ADD sockd.conf /etc/
 
 ENTRYPOINT [ \
     "/bin/bash", "-c", \
-    "cd /etc/openvpn && /usr/sbin/openvpn --config *.conf --up /usr/local/bin/sockd.sh" \
+    "cd /etc/openvpn && /usr/sbin/openvpn --script-security 2 --config *.conf --up /usr/local/bin/sockd.sh" \
     ]
